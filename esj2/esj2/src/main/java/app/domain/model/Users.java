@@ -118,6 +118,10 @@ public class Users {
  public boolean hasRole(Role expectedRole) {
 	 return this.role.equals(expectedRole);
  }
+
+ 
+	
+ }
     
-}
+
 
