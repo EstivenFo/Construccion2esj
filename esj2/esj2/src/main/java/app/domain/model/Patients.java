@@ -7,6 +7,7 @@ public class Patients extends Users {
 	private String username;     
     private String password;     
     private String gender;
+    private Users owner;
     
     public Patients(int IdUsers, String fullName, String idCard, String email, String phone, LocalDate birthDate,
 			String address, String username, String password, Role role, String gender) {
@@ -42,7 +43,11 @@ public class Patients extends Users {
 		this.gender = gender;
 	}
 
-	
-   
-    
-    }
+	public Users getOwner() {
+		return owner;
+	}
+	public void setOwner(Users owner) {
+		this.owner = owner;
+  
+	}
+	}
