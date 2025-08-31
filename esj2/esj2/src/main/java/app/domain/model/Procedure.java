@@ -2,79 +2,57 @@ package app.domain.model;
 
 public class Procedure {
 
-	private int procedureId;
-    private String name;
+    private String orderNumber;        
+    private String procedureId;        
     private int quantity;              
-    private String frequency;          
+    private int frequency;             
     private boolean requiresSpecialist;
-    private String specialistType;     
-    private double cost;
+    private String specialistCaseId;   
+    private String item;
     
-    public Procedure(int procedureId, String name, int quantity, String frequency,
-            boolean requiresSpecialist, String specialistType, double cost) {
-this.procedureId = procedureId;
-this.name = name;
-this.quantity = quantity;
-this.frequency = frequency;
-this.requiresSpecialist = requiresSpecialist;
-this.specialistType = specialistType;
-this.cost = cost;
-    }
-
-	public int getProcedureId() {
+	public String getOrderNumber() {
+		return orderNumber;
+	}
+	public void setOrderNumber(String orderNumber) {
+		this.orderNumber = orderNumber;
+	}
+	public String getProcedureId() {
 		return procedureId;
 	}
-
-	public void setProcedureId(int procedureId) {
+	public void setProcedureId(String procedureId) {
 		this.procedureId = procedureId;
 	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public int getQuantity() {
 		return quantity;
 	}
-
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
-	public String getFrequency() {
+	public int getFrequency() {
 		return frequency;
 	}
-
-	public void setFrequency(String frequency) {
+	public void setFrequency(int frequency) {
 		this.frequency = frequency;
 	}
-
 	public boolean isRequiresSpecialist() {
 		return requiresSpecialist;
 	}
-
 	public void setRequiresSpecialist(boolean requiresSpecialist) {
 		this.requiresSpecialist = requiresSpecialist;
 	}
-
-	public String getSpecialistType() {
-		return specialistType;
+	public String getSpecialistCaseId() {
+		return specialistCaseId;
 	}
-
-	public void setSpecialistType(String specialistType) {
-		this.specialistType = specialistType;
+	public void setSpecialistCaseId(String specialistCaseId) {
+		this.specialistCaseId = specialistCaseId;
 	}
-
-	public double getCost() {
-		return cost;
+	public String getItem() {
+		return item;
 	}
-
-	public void setCost(double cost) {
-		this.cost = cost;
-	}
+	public void setItem(String item) {
+		this.item = item;
+	} 
     
+    
+
 }

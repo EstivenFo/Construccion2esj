@@ -1,13 +1,12 @@
 package app.domain.ports;
 
 import app.domain.model.Procedure;
-import java.util.List;
 
 public interface ProcedurePort {
-
-	 void save(Procedure procedure);
-	 Procedure findById(int id);
-	 List<Procedure> findAll();
-	 List<Procedure> findBySpecialistType(String specialistType);
 	
+	public Procedure  findByDocument(Procedure  procedure) throws Exception;
+	public Procedure  findByUserName(Procedure  procedure) throws Exception;
+	public Procedure  findEmergencyContactnumber(Procedure  procedure)throws Exception;
+	public void save(Procedure  procedure) throws Exception;
+
 }

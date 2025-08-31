@@ -1,51 +1,47 @@
 package app.domain.model;
 
-import java.time.LocalDate;
+import app.domain.model.enuns.PolicyStatus;
 
-public class MedicalInsurance {
-	 private String companyName;
-	    private String policyNumber;
-	    private boolean status;   
-	    private LocalDate validity; 
+public class MedicalInsurance{
 
-	    // Constructor
-	    public MedicalInsurance(String companyName, String policyNumber, boolean status, LocalDate validity) {
-	        this.companyName = companyName;
-	        this.policyNumber = policyNumber;
-	        this.status = status;
-	        this.validity = validity;
-}
-
-		public String getCompanyName() {
-			return companyName;
+	    private String insuranceCompany;   
+	    private Patient patient;          
+	    private String policyNumber;       
+	    private PolicyStatus policystatus;
+	    private boolean active;
+	    
+		public boolean isActive() {
+			return active;
 		}
-
-		public void setCompanyName(String companyName) {
-			this.companyName = companyName;
+		public void setActive(boolean active) {
+			this.active = active;
 		}
-
+		public String getInsuranceCompany() {
+			return insuranceCompany;
+		}
+		public void setInsuranceCompany(String insuranceCompany) {
+			this.insuranceCompany = insuranceCompany;
+		}
+		public Patient getPatient() {
+			return patient;
+		}
+		public void setPatient(Patient patient) {
+			this.patient = patient;
+		}
 		public String getPolicyNumber() {
 			return policyNumber;
 		}
-
 		public void setPolicyNumber(String policyNumber) {
 			this.policyNumber = policyNumber;
 		}
-
-		public boolean isStatus() {
-			return status;
+		public PolicyStatus getPolicystatus() {
+			return policystatus;
 		}
-
-		public void setStatus(boolean status) {
-			this.status = status;
-		}
-
-		public LocalDate getValidity() {
-			return validity;
-		}
-
-		public void setValidity(LocalDate validity) {
-			this.validity = validity;
+		public void setPolicystatus(PolicyStatus policystatus) {
+			this.policystatus = policystatus;
 		}
 	    
-}
+	    
+		
+	}
+

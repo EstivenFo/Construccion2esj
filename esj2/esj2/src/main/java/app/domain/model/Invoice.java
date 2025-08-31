@@ -1,103 +1,67 @@
 package app.domain.model;
 
-import java.time.LocalDate;
+//import app.domain.model.enuns.Role;
 
 public class Invoice {
 	
-	 private int invoiceId;
-	    private String patientName;
-	    private int patientAge;
-	    private String patientIdCard;
-	    private String doctorName;
-	    private String insuranceName;
-	    private String policyNumber;
-	    private LocalDate date;
-	    private double totalAmount;
-	    
-	    public Invoice(int invoiceId, String patientName, int patientAge, String patientIdCard,
-                String doctorName, String insuranceName, String policyNumber,
-                LocalDate date, double totalAmount) {
-     this.invoiceId = invoiceId;
-     this.patientName = patientName;
-     this.patientAge = patientAge;
-     this.patientIdCard = patientIdCard;
-     this.doctorName = doctorName;
-     this.insuranceName = insuranceName;
-     this.policyNumber = policyNumber;
-     this.date = date;
-     this.totalAmount = totalAmount;
- }
-
-		public int getInvoiceId() {
-			return invoiceId;
+		private String namePatient;
+		private long agePatient;
+		private String IdCardPatient;
+		private String medicName;
+		private String companyInsuranceName;
+		private String policyNumber;
+		private String vigencyPolicy;
+		private String finalVigencyPolicy;
+		
+		
+		public String getNamePatient() {
+			return namePatient;
 		}
-
-		public void setInvoiceId(int invoiceId) {
-			this.invoiceId = invoiceId;
+		public void setNamePatient(String namePatient) {
+			this.namePatient = namePatient;
 		}
-
-		public String getPatientName() {
-			return patientName;
+		public long getAgePatient() {
+			return agePatient;
 		}
-
-		public void setPatientName(String patientName) {
-			this.patientName = patientName;
+		public void setAgePatient(long agePatient) {
+			this.agePatient = agePatient;
 		}
-
-		public int getPatientAge() {
-			return patientAge;
+		public String getIdCardPatient() {
+			return IdCardPatient;
 		}
-
-		public void setPatientAge(int patientAge) {
-			this.patientAge = patientAge;
+		public void setIdCardPatient(String idCardPatient) {
+			IdCardPatient = idCardPatient;
 		}
-
-		public String getPatientIdCard() {
-			return patientIdCard;
+		public String getMedicName() {
+			return medicName;
 		}
-
-		public void setPatientIdCard(String patientIdCard) {
-			this.patientIdCard = patientIdCard;
+		public void setMedicName(String medicName) {
+			this.medicName = medicName;
 		}
-
-		public String getDoctorName() {
-			return doctorName;
+		public String getCompanyInsuranceName() {
+			return companyInsuranceName;
 		}
-
-		public void setDoctorName(String doctorName) {
-			this.doctorName = doctorName;
+		public void setCompanyInsuranceName(String companyInsuranceName) {
+			this.companyInsuranceName = companyInsuranceName;
 		}
-
-		public String getInsuranceName() {
-			return insuranceName;
-		}
-
-		public void setInsuranceName(String insuranceName) {
-			this.insuranceName = insuranceName;
-		}
-
 		public String getPolicyNumber() {
 			return policyNumber;
 		}
-
 		public void setPolicyNumber(String policyNumber) {
 			this.policyNumber = policyNumber;
 		}
-
-		public LocalDate getDate() {
-			return date;
+		public String getVigencyPolicy() {
+			return vigencyPolicy;
 		}
-
-		public void setDate(LocalDate date) {
-			this.date = date;
+		public void setVigencyPolicy(String vigencyPolicy) {
+			this.vigencyPolicy = vigencyPolicy;
 		}
-
-		public double getTotalAmount() {
-			return totalAmount;
+		public String getFinalVigencyPolicy() {
+			return finalVigencyPolicy;
 		}
-
-		public void setTotalAmount(double totalAmount) {
-			this.totalAmount = totalAmount;
+		public void setFinalVigencyPolicy(String finalVigencyPolicy) {
+			this.finalVigencyPolicy = finalVigencyPolicy;
 		}
+		
 
 }

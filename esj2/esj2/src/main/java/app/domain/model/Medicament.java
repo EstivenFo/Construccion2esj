@@ -1,60 +1,49 @@
 package app.domain.model;
 
 public class Medicament {
-
-
-    private int IdMedicament;
-    private String name;
-    private String dosage;    
-    private String duration; 
-    private double cost;
-    
-    public Medicament(int IdMedicament, String name, String dosage, String duration, double cost) {
-        this.IdMedicament = IdMedicament;
-        this.name = name;
-        this.dosage = dosage;
-        this.duration = duration;
-        this.cost = cost;
-    }
-
-	public int getIdMedicament() {
-		return IdMedicament;
+	private long medicalOrderNumber;
+	private long  idMedicament;
+	private String medicamentName;
+	private String dose; //dosis
+	private String durationTreatment;
+	private long item; //número al que hace referencia dentro de la orden
+	
+	public long getMedicalOrderNumber() {
+		return medicalOrderNumber;
 	}
-
-	public void setIdMedicament(int idMedicament) {
-		IdMedicament = idMedicament;
+	public void setMedicalOrderNumber(long medicalOrderNumber) {
+		this.medicalOrderNumber = medicalOrderNumber;
 	}
-
-	public String getName() {
-		return name;
+	public long getIdMedicament() {
+		return idMedicament;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setIdMedicament(long idMedicament) {
+		this.idMedicament = idMedicament;
 	}
-
-	public String getDosage() {
-		return dosage;
+	public String getMedicamentName() {
+		return medicamentName;
 	}
-
-	public void setDosage(String dosage) {
-		this.dosage = dosage;
+	public void setMedicamentName(String medicamentName) {
+		this.medicamentName = medicamentName;
 	}
-
-	public String getDuration() {
-		return duration;
+	public String getDose() {
+		return dose;
 	}
-
-	public void setDuration(String duration) {
-		this.duration = duration;
+	public void setDose(String dose) {
+		this.dose = dose;
 	}
-
-	public double getCost() {
-		return cost;
+	public String getDurationTreatment() {
+		return durationTreatment;
 	}
-
-	public void setCost(double cost) {
-		this.cost = cost;
+	public void setDurationTreatment(String durationTreatment) {
+		this.durationTreatment = durationTreatment;
 	}
-    
+	public long getItem() {
+		return item;
+	}
+	public void setItem(long item) {
+		this.item = item;
+	}
+	
 }
+

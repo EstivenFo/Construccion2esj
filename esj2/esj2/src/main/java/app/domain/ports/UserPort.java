@@ -1,10 +1,9 @@
 package app.domain.ports;
 
-import app.domain.model.Users;
+import app.domain.model.User;
 
 public interface UserPort { 
-	public Users findByDocument(Users Users) throws Exception;
-	public Users finByUsername(Users Users) throws Exception;
-	public void save(Users Users) throws Exception;
-	
+	public User findByDocument(User Users) throws Exception;
+	public User findByUsername(User Users) throws Exception;
+	public void save(User Users) throws Exception;
 }
