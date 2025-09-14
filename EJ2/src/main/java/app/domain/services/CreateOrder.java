@@ -1,17 +1,22 @@
 package app.domain.services;
 
 import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import app.domain.model.Order;
 import app.domain.model.OrderItem;
 import app.domain.ports.OrderPort;
 import app.domain.model.enums.Role;
 import app.domain.model.User;
 
+@Service
 public class CreateOrder {
-
+	@Autowired
 	private OrderPort orderPort;
 
-	public void create(String patientId, String doctorId, boolean requiereHospitalizacion, User user, Order order)
+	public void create(String patientId, String doctorId, boolean requiresHospitalization, User user, Order order)
 			throws Exception {
 
 		if (patientId == null || patientId.isEmpty()) {
@@ -31,7 +36,7 @@ public class CreateOrder {
 		order.setCreationDate(LocalDate.now());
 
 		// Hospitalización como procedimiento (si aplica)
-		if (requiereHospitalizacion) {
+		if (requiresHospitalization) {
 			order.addItem(new OrderItem("Procedimiento", "Hospitalización del paciente",
 					"Ingreso en sala general bajo observación continua"));
 		}

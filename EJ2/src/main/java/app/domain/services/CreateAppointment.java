@@ -2,13 +2,18 @@ package app.domain.services;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import app.domain.model.Appointment;
 import app.domain.ports.AppointmentPort;
 import app.domain.model.enums.Role;
 import app.domain.model.User;
 
+@Service
 public class CreateAppointment {
-
+	@Autowired
 	private AppointmentPort appointmentPort;
 
 	// Crear una nueva cita

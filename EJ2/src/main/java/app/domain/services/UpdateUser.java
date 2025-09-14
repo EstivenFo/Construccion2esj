@@ -2,8 +2,11 @@ package app.domain.services;
 
 import app.domain.model.enums.Role;
 import app.domain.ports.UserPort;
-import app.domain.model.User;
 
+import org.springframework.stereotype.Service;
+
+import app.domain.model.User;
+@Service
 public class UpdateUser {
 
     private  UserPort userPort;

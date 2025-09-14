@@ -1,12 +1,16 @@
 package app.domain.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import app.domain.model.Invoice;
 import app.domain.model.enums.Role;
 import app.domain.ports.InvoicePort;
 import app.domain.model.User;
 
+@Service
 public class CreateInvoice {
-
+	@Autowired
 	private InvoicePort invoicePort;
 
 	// Crear y guardar una nueva factura

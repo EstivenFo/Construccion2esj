@@ -1,10 +1,12 @@
 package app.domain.services;
 
+import org.springframework.stereotype.Service;
+
 import app.domain.model.Record;
 import app.domain.model.User;
 import app.domain.model.enums.Role;
 import app.domain.ports.RecordPort;
-
+@Service
 public class UpdateRecord {
 
     private  RecordPort recordPort;

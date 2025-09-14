@@ -6,6 +6,7 @@ public class MedicalRecord {
 	private String consultationReason;
 	private String symptoms;
 	private String diagnosis;
+	private String Treatment;
 
 	public String getDate() {
 		return date;
@@ -45,6 +46,14 @@ public class MedicalRecord {
 
 	public void setDiagnosis(String diagnosis) {
 		this.diagnosis = diagnosis;
+	}
+
+	public String getTreatment() {
+		return Treatment;
+	}
+
+	public void setTreatment(String treatment) {
+		Treatment = treatment;
 	}
 
 }

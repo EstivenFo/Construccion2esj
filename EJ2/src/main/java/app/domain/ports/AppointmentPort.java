@@ -21,3 +21,4 @@ public interface AppointmentPort {
     // Listar todas las citas
    public List<Appointment> findAll() throws Exception;
 }
+

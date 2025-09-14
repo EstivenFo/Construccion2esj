@@ -5,17 +5,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-	private int orderNumber;
+	private long orderNumber;
 	private String patientId;
 	private String doctorId;
 	private LocalDate creationDate;
 	private List<OrderItem> items = new ArrayList<>();
 
-	public int getOrderNumber() {
+	public long getOrderNumber() {
 		return orderNumber;
 	}
 
-	public void setOrderNumber(int orderNumber) {
+	public void setOrderNumber(long orderNumber) {
 		this.orderNumber = orderNumber;
 	}
 

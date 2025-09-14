@@ -1,12 +1,16 @@
 package app.domain.services;
 
 import app.domain.model.Visit;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import app.domain.model.User;
 import app.domain.ports.VisitPort;
 import app.domain.model.enums.Role;
-
+@Service
 public class CreateVisit {
-
+	@Autowired
 	private VisitPort visitPort;
 
 	// Método para crear una visita

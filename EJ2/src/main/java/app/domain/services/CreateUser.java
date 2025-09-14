@@ -1,11 +1,14 @@
 package app.domain.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import app.domain.model.User;
 import app.domain.model.enums.Role;
 import app.domain.ports.UserPort;
-
+@Service
 public class CreateUser {
-
+	@Autowired
     private  UserPort userPort;
 
     // Crear empleado con validación de rol
@@ -27,7 +30,7 @@ public class CreateUser {
 
 
     // Buscar empleado por ID
-    public User searchById(long idCard) throws Exception {
+    public User searchById(String idCard) throws Exception {
         User user = userPort.searchById(idCard);
         if (user == null) {
             throw new Exception("Empleado con ID " + idCard + " no encontrado.");

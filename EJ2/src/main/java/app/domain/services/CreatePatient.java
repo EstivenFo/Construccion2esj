@@ -1,12 +1,16 @@
 package app.domain.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import app.domain.model.Patient;
 import app.domain.model.User;
 import app.domain.model.enums.Role;
 import app.domain.ports.PatientPort;
 
+@Service
 public class CreatePatient {
-
+	@Autowired
     private  PatientPort patientPort;
 
     // Método para registrar un paciente (solo ADMINISTRATIVESTAFF puede hacerlo)
